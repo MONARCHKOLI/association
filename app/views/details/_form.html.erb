@@ -1,0 +1,22 @@
+<%= form_with model:[@article,@article.details.build] do |form| %>
+<p>
+<%= form.label :username %><br>
+<%= form.text_field :username %>
+</p>
+<p>
+<%= form.label :password %><br>
+<%= form.text_field :password %>
+</p>
+<p>
+<%= form.label :email %><br>
+<%= form.text_field :email %>
+</p>
+<p>
+<%= form.label :mobile %><br>
+<%= form.text_field :mobile %>
+</p>
+ <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>

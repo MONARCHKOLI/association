@@ -1,0 +1,38 @@
+
+<%= form_with model: @article do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @article.errors.full_messages_for(:name).each do |message|%>
+    <%= message%>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_field :body %>
+    <% @article.errors.full_messages_for(:body).each do |message|%>
+    <%= message%>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :gender %><br>
+    <%= form.text_field :gender %>
+    <% @article.errors.full_messages_for(:gender).each do |message|%>
+    <%= message%>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :aadhar_no %><br>
+    <%= form.text_field :aadhar_no %>
+    <% @article.errors.full_messages_for(:aadhar_no).each do |message|%>
+    <%= message%>
+    <% end %>
+  </div>
+<br>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

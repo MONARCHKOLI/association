@@ -1,0 +1,14 @@
+<% @article.details.each do |detail|%>
+    <p><%= detail.username %></p>
+    <p><%= detail.password %></p>
+    <p><%= detail.email %></p>
+    <p><%= detail.mobile %></p>
+
+    
+    <%= link_to "   Destroy", [detail.article ,detail], data:{
+    turbo_method: :delete,
+    turbo_confirm: "sure???..."
+} %>
+<% end %>
+
+
